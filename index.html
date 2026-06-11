@@ -373,11 +373,11 @@
   </div>
 
   <div class="panel poi-panel">
-    <h2>Prochains POIs (<span id="poi-count">0</span>)</h2>
+    <h2>POIs (<span id="poi-count">0</span>)</h2>
     <div class="poi-controls">
       <div class="segmented" aria-label="Mode POI">
-        <button type="button" class="active" data-poi-mode="next">Prochains</button>
-        <button type="button" data-poi-mode="all">Tous</button>
+        <button type="button" data-poi-mode="next">Prochains</button>
+        <button type="button" class="active" data-poi-mode="all">Tous</button>
       </div>
       <div class="poi-filter-buttons" aria-label="Filtres POI">
         <button type="button" class="filter-btn active" data-poi-filter="WATER">Eau</button>
@@ -1349,7 +1349,7 @@ function updatePaceState({
     let history = loadHistory();
     let pendingNew = null;  // a consultation awaiting stop-resolution
     let pendingSegment = null;  // last segment info for the prompt
-    let poiMode = "next";
+    let poiMode = "all";
     const activePoiFilters = new Set(["WATER", "FOOD", "SERVICES"]);
     let rGlobal = recomputeRGlobalFromHistory(history);
     let viewMode = localStorage.getItem("pace-test-view-mode") || "glance";
